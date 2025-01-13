@@ -92,7 +92,6 @@ tomli
 torch==2.5.1
 tornado==6.4.2
 traitlets==5.14.3
-triton
 typer==0.15.1
 typing_extensions==4.12.2
 urllib3==2.3.0
