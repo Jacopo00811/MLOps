@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "test_project"
+version = "0.0.1"
+description = "This is a test project for the course MLOps at DTU"
+authors = [
+  { name = "Jacopo", email = "your@email.com" },
+]
+license = { file = "LICENSE" }
+keywords = ["machine learning", "MLOps"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dynamic = ["dependencies", "optional-dependencies"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.setuptools.dynamic.optional-dependencies]
+dev = {file = ['requirements_dev.txt']}
+
+[tool.ruff]
+lint.select = ["I"]
+line-length = 120
+lint.ignore = ["D100", "D101"]
+
+[tool.coverage.run]
+omit = ["tests/*"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"  # Set the docstring convention
+
+[project.scripts]
+train = "test_project.train:train"
