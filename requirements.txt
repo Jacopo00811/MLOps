@@ -100,7 +100,7 @@ sympy==1.13.1
 -e git+https://github.com/Jacopo00811/MLOps.git@29aeeef6f4f928ffdf7b101b6ace23c666211043#egg=test_project
 threadpoolctl==3.5.0
 tinycss2==1.4.0
-tomli @ file:///home/conda/feedstock_root/build_artifacts/tomli_1733256695513/work
+tomli
 torch==2.5.1
 tornado==6.4.2
 traitlets==5.14.3
